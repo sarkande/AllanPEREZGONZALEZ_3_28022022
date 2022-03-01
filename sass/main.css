@@ -1,3 +1,11 @@
 @import url(http://fonts.googleapis.com/css?family=Shrikhand|Open+Sans:400italic,700italic,400,700);
 @import url(http://fonts.googleapis.com/css?family=Roboto|Open+Sans:400italic,700italic,400,700);
+body {
+  font-family: "Roboto", serif;
+}
+
+h1,
+h5 {
+  font-family: "Shrikhand", serif;
+}
 /*# sourceMappingURL=main.css.map */
