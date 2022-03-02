@@ -7,8 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Projet_03</title>
     <link rel="stylesheet" href="./sass/main.css">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css"
-    integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!-- <link rel="stylesheet" href="public/css/style.css"> -->
 </head>
 
@@ -18,27 +17,41 @@
     </header>
     <main>
         <section class="search">
-            <div><h4>ICONE Paris, Belleville</h4></div>
-            <div>
+            <div class="search__location">
+                <h4><i class="fas fa-map-marker-alt"></i>Paris, Belleville</h4>
+            </div>
+            <div class="search__content">
                 <h2>Réservez le menu qui vous convient</h2>
                 <p>Découvrez des restaurants d'exception, séléctionnés par nos soins.</p>
-                <button>Explorer nos restaurants</button>
+                <button class="search__content--btn">Explorer nos restaurants</button>
             </div>    
         </section >
             
         <section class="funct">
             <h2>Fonctionnement</h2>
-            <div class="funct__card"></div>
-            <div class="funct__card"></div>
-            <div class="funct__card"></div>
+            <div class="funct__card">
+                <div class="funct__card--id">1</div>
+                <p><i class="fas fa-mobile-screen-button"></i>Choisissez un restaurant</p>
+            </div>
+            <div class="funct__card">
+                <div class="funct__card--id">2</div>
+                <p><i class="fa-solid fa-list-ul"></i>Composez votre menu</p>
+            </div>
+            <div class="funct__card">
+                <div class="funct__card--id">3</div>
+                <p><i class="fa-solid fa-store"></i>Dégustez au restaurant</p>
+            </div>
         </section>
         <section class="restaurants">
+            <h2>Restaurants</h2>
             <div class="restaurants__card">
                 <img src="" alt="">
                 <div class="restaurants__card--new">Nouveau</div>
                 <h3></h3>
                 <p></p>
-                <div class="restaurants__card--heart"></div>
+                <div class="restaurants__card--heart">
+                    <i class="fa-regular fa-heart"></i>
+                </div>
             </div>
             <div class="restaurants__card">
                 <img src="" alt="">

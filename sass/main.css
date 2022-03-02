@@ -1,11 +1,136 @@
 @import url(http://fonts.googleapis.com/css?family=Shrikhand|Open+Sans:400italic,700italic,400,700);
-@import url(http://fonts.googleapis.com/css?family=Roboto|Open+Sans:400italic,700italic,400,700);
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;900&display=swap");
+* {
+  border: 0 none;
+  outline: 0;
+  padding: 0;
+  margin: 0;
+}
+
 body {
   font-family: "Roboto", serif;
+  color: black;
 }
 
 h1,
 h5 {
   font-family: "Shrikhand", serif;
+}
+
+header {
+  padding-top: 20px;
+  padding-bottom: 5px;
+  -webkit-box-shadow: 0px 0px 5px #6e6e6e;
+          box-shadow: 0px 0px 5px #6e6e6e;
+  position: relative;
+}
+
+header > h1 {
+  text-align: center;
+}
+
+.search {
+  text-align: center;
+  background-color: #eaeaea;
+  z-index: 5;
+}
+
+.search__location {
+  padding: 5px;
+}
+
+.search__location h4 {
+  padding: 10px;
+  font-weight: normal;
+}
+
+.search__location h4 i {
+  position: relative;
+  right: 20px;
+}
+
+.search__content {
+  background-color: #f6f6f6;
+  padding-top: 30px;
+}
+
+.search__content h2 {
+  font-weight: bold;
+  margin: 15px 20px 20px 15px;
+}
+
+.search__content p {
+  font-weight: 300;
+  margin: 0px 20px 20px 15px;
+}
+
+.search__content--btn {
+  margin: 15px;
+  margin-bottom: 50px;
+  padding: 10px;
+  border-radius: 30px;
+  width: 200px;
+  height: 50px;
+  background: -webkit-gradient(linear, left top, left bottom, from(#ff79da), to(#9356dc));
+  background: linear-gradient(#ff79da, #9356dc);
+  color: #fff;
+  font-weight: 500;
+  -webkit-box-shadow: 2px 2px 5px #a1a1a1;
+          box-shadow: 2px 2px 5px #a1a1a1;
+}
+
+.funct {
+  background-color: #fff;
+}
+
+.funct h2 {
+  margin-top: 40px;
+  margin-left: 15px;
+}
+
+.funct__card {
+  border-radius: 10px;
+  height: 50px;
+  margin: 20px;
+  background-color: #f6f6f6;
+  line-height: 50px;
+  -webkit-box-shadow: 2px 2px 5px #d4d4d4;
+          box-shadow: 2px 2px 5px #d4d4d4;
+}
+
+.funct__card--id {
+  border-radius: 100%;
+  width: 20px;
+  height: 20px;
+  line-height: 20px;
+  right: 10px;
+  position: relative;
+  display: inline-block;
+  text-align: center;
+  background-color: #9356dc;
+  color: #fff;
+  font-size: small;
+}
+
+.funct__card p {
+  position: relative;
+  display: inline-block;
+  left: 40px;
+  font-weight: 500;
+}
+
+.funct__card p i {
+  position: relative;
+  right: 30px;
+  color: gray;
+}
+
+.restaurants {
+  background-color: #f6f6f6;
+  padding-top: 30px;
+}
+
+.restaurants h2 {
+  margin: 15px;
 }
 /*# sourceMappingURL=main.css.map */

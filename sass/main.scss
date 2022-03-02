@@ -1,7 +1,6 @@
 // Google Fonts
 @import url(http://fonts.googleapis.com/css?family=Shrikhand|Open+Sans:400italic,700italic,400,700);
-@import url(http://fonts.googleapis.com/css?family=Roboto|Open+Sans:400italic,700italic,400,700);
-
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;900&display=swap");
 // Font Variables
 $shrikhand: "Shrikhand", serif;
 $roboto: "Roboto", serif;
@@ -10,13 +9,130 @@ $roboto: "Roboto", serif;
 $color-primary: #9356dc;
 $color-secondary: #ff79da;
 $color-tertiary: #99e2d0;
-//test
 
+$color-text: black;
+
+$color-shadow: rgb(110, 110, 110);
+$color-background-search: #eaeaea;
+$color-background-search-content: #f6f6f6;
+$color-background-funct: #fff;
+
+$color-btn: #fff;
+$color-background-funct-btn: #f6f6f6;
+
+$color-background-restaurants: #f6f6f6;
+
+//test
+* {
+	border: 0 none;
+	outline: 0;
+	padding: 0;
+	margin: 0;
+}
 body {
 	font-family: $roboto;
+	color: $color-text;
 }
 
 h1,
 h5 {
 	font-family: $shrikhand;
+}
+
+header {
+	padding-top: 20px;
+	padding-bottom: 5px;
+	box-shadow: 0px 0px 5px $color-shadow;
+	position: relative;
+	& > h1 {
+		text-align: center;
+	}
+}
+
+.search {
+	text-align: center;
+	background-color: $color-background-search;
+	z-index: 5;
+	&__location {
+		padding: 5px;
+		h4 {
+			padding: 10px;
+			font-weight: normal;
+			i {
+				position: relative;
+				right: 20px;
+			}
+		}
+	}
+	&__content {
+		background-color: $color-background-search-content;
+		padding-top: 30px;
+		h2 {
+			font-weight: bold;
+			margin: 15px 20px 20px 15px;
+		}
+		p {
+			font-weight: 300;
+			margin: 0px 20px 20px 15px;
+		}
+		&--btn {
+			margin: 15px;
+			margin-bottom: 50px;
+			padding: 10px;
+			border-radius: 30px;
+			width: 200px;
+			height: 50px;
+			background: linear-gradient($color-secondary, $color-primary);
+			color: $color-btn;
+			font-weight: 500;
+			box-shadow: 2px 2px 5px lighten($color-shadow, 20%);
+		}
+	}
+}
+.funct {
+	background-color: $color-background-funct;
+	h2 {
+		margin-top: 40px;
+		margin-left: 15px;
+	}
+	&__card {
+		border-radius: 10px;
+		height: 50px;
+		margin: 20px;
+		background-color: $color-background-funct-btn;
+		line-height: 50px;
+		box-shadow: 2px 2px 5px lighten($color-shadow, 40%);
+		&--id {
+			border-radius: 100%;
+			width: 20px;
+			height: 20px;
+			line-height: 20px;
+			right: 10px;
+			position: relative;
+			display: inline-block;
+			text-align: center;
+			background-color: $color-primary;
+			color: $color-btn;
+			font-size: small;
+		}
+		p {
+			position: relative;
+			display: inline-block;
+			left: 40px;
+			font-weight: 500;
+			i {
+				position: relative;
+				right: 30px;
+				color: lighten($color-text, 50%);
+			}
+		}
+	}
+}
+
+.restaurants {
+	background-color: $color-background-restaurants;
+	padding-top: 30px;
+	h2 {
+		margin: 15px;
+	}
 }
