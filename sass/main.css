@@ -97,6 +97,8 @@ header > h1 {
   line-height: 50px;
   -webkit-box-shadow: 2px 2px 5px #d4d4d4;
           box-shadow: 2px 2px 5px #d4d4d4;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 
 .funct__card a,
@@ -156,7 +158,7 @@ header > h1 {
   margin: 15px;
   height: 250px;
   border-radius: 20px;
-  background-color: white;
+  background-color: #fff;
   -webkit-box-shadow: 2px 2px 5px #a1a1a1;
           box-shadow: 2px 2px 5px #a1a1a1;
 }
@@ -209,5 +211,27 @@ header > h1 {
 .restaurants h2 {
   margin: 15px;
   width: 100%;
+}
+
+footer {
+  background-color: #353535;
+  color: #fff;
+  padding-left: 10px;
+}
+
+footer h5 {
+  padding-top: 20px;
+  padding-bottom: 15px;
+  font-size: 20px;
+  font-weight: normal;
+}
+
+footer li {
+  margin-top: 10px;
+  list-style-type: none;
+}
+
+footer li:last-child {
+  padding-bottom: 50px;
 }
 /*# sourceMappingURL=main.css.map */
