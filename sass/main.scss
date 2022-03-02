@@ -99,7 +99,7 @@ header {
 	}
 	&__card {
 		border-radius: 10px;
-		height: 50px;
+		min-height: 50px;
 		margin: 20px;
 		background-color: $color-background-funct-btn;
 		line-height: 50px;
@@ -129,6 +129,7 @@ header {
 			display: inline-block;
 			left: 40px;
 			font-weight: 500;
+			margin-right: 50px;
 			i {
 				position: relative;
 				right: 30px;
@@ -144,40 +145,43 @@ header {
 	padding-bottom: 50px;
 	display: flex;
 	flex-wrap: wrap;
-	&__card {
+	&-link {
 		flex: 1 100%;
-		border-radius: 15px;
-		margin: 15px;
-		height: 250px;
-		margin-bottom: 25px;
-		box-shadow: 2px 2px 5px lighten($color-shadow, 40%);
-
-		&--img {
-			width: 100%;
-			height: 100%;
-			border-radius: 15px;
-			object-fit: cover;
-			object-position: 68% 57%;
-		}
-		&--title {
-			background-color: $color-background-restaurants--title;
-			position: relative;
-			bottom: 75px;
-			height: 70px;
-			padding-top: 15px;
-			padding-left: 15px;
-			border-radius: 0px 0px 15px 15px;
-
-			h3 {
-				margin-bottom: 5px;
+		text-decoration: none;
+		color: $color-text;
+		&__card {
+			margin: 15px;
+			height: 250px;
+			border-radius: 20px;
+			background-color: white;
+			box-shadow: 2px 2px 5px lighten($color-shadow, 20%);
+			&--img {
+				width: 100%;
+				height: 175px;
+				object-fit: cover;
+				border-radius: 20px 20px 0px 0px;
 			}
-			&--heart {
-				position: absolute;
-				right: 30px;
-				bottom: 20px;
-				font-size: 30px;
+			&--descr {
+				h3 {
+					margin-top: 10px;
+					margin-left: 10px;
+				}
+				p {
+					margin-left: 10px;
+				}
+				i {
+					position: relative;
+					right: 35px;
+					float: right;
+					bottom: 40px;
+					font-size: 30px;
+					&:hover {
+						color: red;
+					}
+				}
 			}
 		}
+
 		&--new {
 			background-color: $color-tertiary;
 			color: darken($color-tertiary, 40%);
@@ -187,8 +191,8 @@ header {
 
 			position: relative;
 			float: right;
-			margin-right: 20px;
-			bottom: 320px;
+			margin-right: 25px;
+			bottom: 255px;
 			visibility: hidden;
 			&.active {
 				visibility: visible;

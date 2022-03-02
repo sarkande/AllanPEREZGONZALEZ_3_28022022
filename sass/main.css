@@ -91,7 +91,7 @@ header > h1 {
 
 .funct__card {
   border-radius: 10px;
-  height: 50px;
+  min-height: 50px;
   margin: 20px;
   background-color: #f6f6f6;
   line-height: 50px;
@@ -124,6 +124,7 @@ header > h1 {
   display: inline-block;
   left: 40px;
   font-weight: 500;
+  margin-right: 50px;
 }
 
 .funct__card p i {
@@ -143,62 +144,65 @@ header > h1 {
       flex-wrap: wrap;
 }
 
-.restaurants__card {
+.restaurants-link {
   -webkit-box-flex: 1;
       -ms-flex: 1 100%;
           flex: 1 100%;
-  border-radius: 15px;
+  text-decoration: none;
+  color: black;
+}
+
+.restaurants-link__card {
   margin: 15px;
   height: 250px;
-  margin-bottom: 25px;
-  -webkit-box-shadow: 2px 2px 5px #d4d4d4;
-          box-shadow: 2px 2px 5px #d4d4d4;
+  border-radius: 20px;
+  background-color: white;
+  -webkit-box-shadow: 2px 2px 5px #a1a1a1;
+          box-shadow: 2px 2px 5px #a1a1a1;
 }
 
-.restaurants__card--img {
+.restaurants-link__card--img {
   width: 100%;
-  height: 100%;
-  border-radius: 15px;
+  height: 175px;
   -o-object-fit: cover;
      object-fit: cover;
-  -o-object-position: 68% 57%;
-     object-position: 68% 57%;
+  border-radius: 20px 20px 0px 0px;
 }
 
-.restaurants__card--title {
-  background-color: #fff;
+.restaurants-link__card--descr h3 {
+  margin-top: 10px;
+  margin-left: 10px;
+}
+
+.restaurants-link__card--descr p {
+  margin-left: 10px;
+}
+
+.restaurants-link__card--descr i {
   position: relative;
-  bottom: 75px;
-  height: 70px;
-  padding-top: 15px;
-  padding-left: 15px;
-  border-radius: 0px 0px 15px 15px;
-}
-
-.restaurants__card--title h3 {
-  margin-bottom: 5px;
-}
-
-.restaurants__card--title--heart {
-  position: absolute;
-  right: 30px;
-  bottom: 20px;
+  right: 35px;
+  float: right;
+  bottom: 40px;
   font-size: 30px;
 }
 
-.restaurants__card--new {
+.restaurants-link__card--descr i:hover {
+  color: red;
+}
+
+.restaurants-link--new {
   background-color: #99e2d0;
   color: #278870;
   text-align: center;
   padding: 5px 10px 5px 10px;
   position: relative;
   float: right;
-  margin-right: 20px;
-  bottom: 320px;
+  margin-right: 25px;
+  bottom: 255px;
   visibility: hidden;
 }
 
-.restaurants__card--new.active {
+.restaurants-link--new.active {
   visibility: visible;
 }
 
