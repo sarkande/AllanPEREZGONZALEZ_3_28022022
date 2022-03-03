@@ -275,25 +275,34 @@ header {
 			div {
 				i {
 					font-size: 30px;
-
-					&.far {
-						position: relative;
-						left: 34px;
-					}
-					&.fas {
-						transform: scale(0);
-						background: linear-gradient($color-secondary, $color-primary);
-						-webkit-text-fill-color: transparent;
-						background-clip: text;
-						transition: all ease-in-out 1000ms;
-					}
 				}
 
-				& .far:active {
+				& > .fas {
+					/*heart full*/
 					transform: scale(0);
+					position: relative;
+					left: 34px;
+					transition: transform 0.3s ease-out;
 
-					& + .fas {
+					background: linear-gradient($color-primary, $color-secondary);
+					-webkit-text-fill-color: transparent;
+					-moz-text-fill-color: transparent;
+					-ms-text-fill-color: transparent;
+					-o-text-fill-color: transparent;
+					background-clip: text;
+					-webkit-background-clip: text;
+				}
+				& > .far {
+					/*heart empty*/
+					opacity: 1;
+					transition: opacity 0.4s ease-out;
+				}
+				&:hover {
+					& > .fas {
 						transform: scale(1);
+					}
+					& > .far {
+						opacity: 0;
 					}
 				}
 			}
@@ -324,16 +333,20 @@ header {
 		list-style-type: none;
 		padding: 5px;
 		h3 {
-			margin: 10px;
+			margin-left: 10px;
+			margin-right: 10px;
 		}
 		p {
-			margin: 10px;
 			display: flex;
 			justify-content: space-between;
-			.starters-list__card--price {
-				margin-right: 20px;
-			}
+			margin: 10px;
 		}
+		&--product {
+			overflow: hidden;
+			text-overflow: ellipsis;
+			white-space: nowrap;
+		}
+
 		&--check {
 			position: absolute;
 			background: #99e2d0;

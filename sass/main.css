@@ -289,30 +289,40 @@ header div h1 {
   font-size: 30px;
 }
 
-.menu-content-title div i.far {
+.menu-content-title div > .fas {
+  /*heart full*/
+  -webkit-transform: scale(0);
+          transform: scale(0);
   position: relative;
   left: 34px;
-}
-
-.menu-content-title div i.fas {
-  -webkit-transform: scale(0);
-          transform: scale(0);
-  background: -webkit-gradient(linear, left top, left bottom, from(#ff79da), to(#9356dc));
-  background: linear-gradient(#ff79da, #9356dc);
+  -webkit-transition: -webkit-transform 0.3s ease-out;
+  transition: -webkit-transform 0.3s ease-out;
+  transition: transform 0.3s ease-out;
+  transition: transform 0.3s ease-out, -webkit-transform 0.3s ease-out;
+  background: -webkit-gradient(linear, left top, left bottom, from(#9356dc), to(#ff79da));
+  background: linear-gradient(#9356dc, #ff79da);
   -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+  -ms-text-fill-color: transparent;
+  -o-text-fill-color: transparent;
   background-clip: text;
-  -webkit-transition: all ease-in-out 1000ms;
-  transition: all ease-in-out 1000ms;
+  -webkit-background-clip: text;
 }
 
-.menu-content-title div .far:active {
-  -webkit-transform: scale(0);
-          transform: scale(0);
+.menu-content-title div > .far {
+  /*heart empty*/
+  opacity: 1;
+  -webkit-transition: opacity 0.4s ease-out;
+  transition: opacity 0.4s ease-out;
 }
 
-.menu-content-title div .far:active + .fas {
+.menu-content-title div:hover > .fas {
   -webkit-transform: scale(1);
           transform: scale(1);
+}
+
+.menu-content-title div:hover > .far {
+  opacity: 0;
 }
 
 .menu-content__card {
@@ -345,21 +355,24 @@ header div h1 {
 }
 
 .menu-content__card-list h3 {
-  margin: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
 }
 
 .menu-content__card-list p {
-  margin: 10px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  margin: 10px;
 }
 
-.menu-content__card-list p .starters-list__card--price {
-  margin-right: 20px;
+.menu-content__card-list--product {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .menu-content__card-list--check {
