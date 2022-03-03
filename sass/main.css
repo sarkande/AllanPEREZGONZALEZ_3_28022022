@@ -96,6 +96,11 @@ header div h1 {
           box-shadow: 2px 2px 5px #a1a1a1;
 }
 
+.search__content--btn:hover {
+  background: -webkit-gradient(linear, left top, left bottom, from(#9356dc), to(#ff79da));
+  background: linear-gradient(#9356dc, #ff79da);
+}
+
 .funct {
   background-color: #fff;
   padding-bottom: 30px;
@@ -197,7 +202,7 @@ header div h1 {
   margin-left: 10px;
 }
 
-.restaurants-link__card--descr i {
+.restaurants-link__card--descr div i {
   position: relative;
   right: 35px;
   float: right;
@@ -205,8 +210,40 @@ header div h1 {
   font-size: 30px;
 }
 
-.restaurants-link__card--descr i:hover {
-  color: red;
+.restaurants-link__card--descr div > .fas {
+  /*heart full*/
+  -webkit-transform: scale(0);
+          transform: scale(0);
+  position: relative;
+  right: 5px;
+  -webkit-transition: -webkit-transform 0.3s ease-out;
+  transition: -webkit-transform 0.3s ease-out;
+  transition: transform 0.3s ease-out;
+  transition: transform 0.3s ease-out, -webkit-transform 0.3s ease-out;
+  background: -webkit-gradient(linear, left top, left bottom, from(#9356dc), to(#ff79da));
+  background: linear-gradient(#9356dc, #ff79da);
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+  -ms-text-fill-color: transparent;
+  -o-text-fill-color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+}
+
+.restaurants-link__card--descr div > .far {
+  /*heart empty*/
+  opacity: 1;
+  -webkit-transition: opacity 0.4s ease-out;
+  transition: opacity 0.4s ease-out;
+}
+
+.restaurants-link__card--descr div:hover > .fas {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+
+.restaurants-link__card--descr div:hover > .far {
+  opacity: 0;
 }
 
 .restaurants-link--new {
@@ -267,6 +304,11 @@ header div h1 {
           box-shadow: 2px 2px 5px #a1a1a1;
   color: #fff;
   cursor: pointer;
+}
+
+.menu-content--btn:hover {
+  background: -webkit-gradient(linear, left top, left bottom, from(#9356dc), to(#ff79da));
+  background: linear-gradient(#9356dc, #ff79da);
 }
 
 .menu-content-title {
@@ -357,6 +399,7 @@ header div h1 {
 .menu-content__card-list h3 {
   margin-left: 10px;
   margin-right: 10px;
+  margin-top: 10px;
 }
 
 .menu-content__card-list p {
@@ -373,6 +416,10 @@ header div h1 {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
+}
+
+.menu-content__card-list--price {
+  font-weight: bold;
 }
 
 .menu-content__card-list--check {
