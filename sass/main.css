@@ -17,6 +17,11 @@ h5 {
   font-family: "Shrikhand", serif;
 }
 
+/*ICONS*/
+.far.fa-heart.thin {
+  font-weight: 100 !important;
+}
+
 header {
   padding-top: 5px;
   padding-bottom: 5px;
@@ -52,16 +57,13 @@ header div h1 {
 
 .search__location {
   padding: 5px;
+  margin-left: 35px;
 }
 
-.search__location h4 {
+.search__location input {
   padding: 10px;
-  font-weight: normal;
-}
-
-.search__location h4 i {
-  position: relative;
-  right: 20px;
+  font-weight: bold;
+  background-color: #eaeaea;
 }
 
 .search__content {
@@ -89,7 +91,7 @@ header div h1 {
   background: -webkit-gradient(linear, left top, left bottom, from(#ff79da), to(#9356dc));
   background: linear-gradient(#ff79da, #9356dc);
   color: #fff;
-  font-weight: 500;
+  font-weight: bold;
   -webkit-box-shadow: 2px 2px 5px #a1a1a1;
           box-shadow: 2px 2px 5px #a1a1a1;
 }
@@ -243,6 +245,7 @@ header div h1 {
 
 .menu-content {
   padding-top: 20px;
+  padding-bottom: 50px;
   border-radius: 20px 20px 0px 0px;
   position: relative;
   bottom: 20px;
@@ -252,7 +255,21 @@ header div h1 {
   margin-bottom: 175px;
 }
 
-.menu-content > div {
+.menu-content--btn {
+  padding: 15px;
+  width: 250px;
+  margin: auto;
+  text-align: center;
+  background: -webkit-gradient(linear, left top, left bottom, from(#ff79da), to(#9356dc));
+  background: linear-gradient(#ff79da, #9356dc);
+  border-radius: 30px;
+  -webkit-box-shadow: 2px 2px 5px #a1a1a1;
+          box-shadow: 2px 2px 5px #a1a1a1;
+  color: #fff;
+  cursor: pointer;
+}
+
+.menu-content-title {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -263,12 +280,43 @@ header div h1 {
   margin-left: 20px;
 }
 
-.menu-content > div h1 {
+.menu-content-title h2 {
+  font-family: "Shrikhand", serif;
   font-weight: normal;
 }
 
-.menu-content > div i {
+.menu-content-title div i {
   font-size: 30px;
+}
+
+.menu-content-title div i.far {
+  position: relative;
+  left: 34px;
+}
+
+.menu-content-title div i.fas {
+  -webkit-transform: scale(0);
+          transform: scale(0);
+  background: -webkit-gradient(linear, left top, left bottom, from(#ff79da), to(#9356dc));
+  background: linear-gradient(#ff79da, #9356dc);
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  -webkit-transition: all ease-in-out 1000ms;
+  transition: all ease-in-out 1000ms;
+}
+
+.menu-content-title div .far:active {
+  -webkit-transform: scale(0);
+          transform: scale(0);
+}
+
+.menu-content-title div .far:active + .fas {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+
+.menu-content__card {
+  margin-bottom: 50px;
 }
 
 .menu-content__card h2 {
@@ -329,6 +377,7 @@ header div h1 {
   text-align: center;
   top: 0;
   right: -100px;
+  display: none;
 }
 
 .menu-content__card-list--check i {
@@ -355,5 +404,10 @@ footer li {
 
 footer li:last-child {
   padding-bottom: 50px;
+}
+
+footer a {
+  text-decoration: none;
+  color: #fff;
 }
 /*# sourceMappingURL=main.css.map */
