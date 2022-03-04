@@ -327,6 +327,14 @@ header div h1 {
   position: absolute;
 }
 
+@media (min-width: 1000px) {
+  .menu-heading {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 100%;
+            flex: 0 100%;
+  }
+}
+
 .menu-content {
   padding-top: 20px;
   padding-bottom: 50px;
@@ -337,6 +345,16 @@ header div h1 {
   background-color: #f6f6f6;
   top: 175px;
   margin-bottom: 175px;
+}
+
+@media (min-width: 1000px) {
+  .menu-content {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
 }
 
 .menu-content--btn {
@@ -369,6 +387,14 @@ header div h1 {
           justify-content: space-between;
   margin-right: 50px;
   margin-left: 20px;
+}
+
+@media (min-width: 1000px) {
+  .menu-content-title {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 100%;
+            flex: 0 100%;
+  }
 }
 
 .menu-content-title h2 {
@@ -420,6 +446,14 @@ header div h1 {
 
 .menu-content__card {
   margin-bottom: 50px;
+}
+
+@media (min-width: 1000px) {
+  .menu-content__card {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 30%;
+            flex: 1 30%;
+  }
 }
 
 .menu-content__card h2 {

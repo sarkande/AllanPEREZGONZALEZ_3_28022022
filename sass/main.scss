@@ -307,6 +307,9 @@ header {
 			object-fit: cover;
 			position: absolute;
 		}
+		@include computer {
+			flex: 0 100%;
+		}
 	}
 	&-content {
 		padding-top: 20px;
@@ -318,6 +321,11 @@ header {
 		background-color: $color-background-restaurants;
 		top: 175px;
 		margin-bottom: 175px;
+
+		@include computer {
+			display: flex;
+			flex-wrap: wrap;
+		}
 
 		&--btn {
 			padding: 15px;
@@ -343,6 +351,11 @@ header {
 			justify-content: space-between;
 			margin-right: 50px;
 			margin-left: 20px;
+
+			@include computer {
+				flex: 0 100%;
+			}
+
 			h2 {
 				font-family: $shrikhand;
 				font-weight: normal;
@@ -390,6 +403,9 @@ header {
 
 .menu-content__card {
 	margin-bottom: 50px;
+	@include computer {
+		flex: 1 30%;
+	}
 	h2 {
 		text-transform: uppercase;
 		margin-left: 20px;
