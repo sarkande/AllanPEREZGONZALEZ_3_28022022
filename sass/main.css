@@ -22,6 +22,24 @@ h5 {
   font-weight: 100 !important;
 }
 
+@media (min-width: 1000px) {
+  main {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+}
+
+@media (min-width: 1000px) {
+  main section {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 40%;
+            flex: 1 1 40%;
+  }
+}
+
 header {
   padding-top: 5px;
   padding-bottom: 5px;
@@ -94,11 +112,22 @@ header div h1 {
   font-weight: bold;
   -webkit-box-shadow: 2px 2px 5px #a1a1a1;
           box-shadow: 2px 2px 5px #a1a1a1;
+  cursor: pointer;
 }
 
 .search__content--btn:hover {
-  background: -webkit-gradient(linear, left top, left bottom, from(#9356dc), to(#ff79da));
-  background: linear-gradient(#9356dc, #ff79da);
+  background: -webkit-gradient(linear, left top, left bottom, from(#ff83dd), to(#985ede));
+  background: linear-gradient(#ff83dd, #985ede);
+  -webkit-box-shadow: 2px 2px 5px #6e6e6e;
+          box-shadow: 2px 2px 5px #6e6e6e;
+}
+
+@media (min-width: 1000px) {
+  .search {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 100%;
+            flex: 0 0 100%;
+  }
 }
 
 .funct {
@@ -157,6 +186,14 @@ header div h1 {
   color: gray;
 }
 
+@media (min-width: 1000px) {
+  .funct {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 100%;
+            flex: 0 0 100%;
+  }
+}
+
 .restaurants {
   background-color: #f6f6f6;
   padding-top: 30px;
@@ -174,6 +211,14 @@ header div h1 {
           flex: 1 100%;
   text-decoration: none;
   color: black;
+}
+
+@media (min-width: 1000px) {
+  .restaurants-link {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 40%;
+            flex: 1 40%;
+  }
 }
 
 .restaurants-link__card {
@@ -228,6 +273,7 @@ header div h1 {
   -o-text-fill-color: transparent;
   background-clip: text;
   -webkit-background-clip: text;
+  cursor: pointer;
 }
 
 .restaurants-link__card--descr div > .far {
@@ -235,6 +281,7 @@ header div h1 {
   opacity: 1;
   -webkit-transition: opacity 0.4s ease-out;
   transition: opacity 0.4s ease-out;
+  cursor: pointer;
 }
 
 .restaurants-link__card--descr div:hover > .fas {
@@ -307,8 +354,10 @@ header div h1 {
 }
 
 .menu-content--btn:hover {
-  background: -webkit-gradient(linear, left top, left bottom, from(#9356dc), to(#ff79da));
-  background: linear-gradient(#9356dc, #ff79da);
+  background: -webkit-gradient(linear, left top, left bottom, from(#ff83dd), to(#985ede));
+  background: linear-gradient(#ff83dd, #985ede);
+  -webkit-box-shadow: 2px 2px 5px #6e6e6e;
+          box-shadow: 2px 2px 5px #6e6e6e;
 }
 
 .menu-content-title {
@@ -349,6 +398,7 @@ header div h1 {
   -o-text-fill-color: transparent;
   background-clip: text;
   -webkit-background-clip: text;
+  cursor: pointer;
 }
 
 .menu-content-title div > .far {
@@ -356,6 +406,7 @@ header div h1 {
   opacity: 1;
   -webkit-transition: opacity 0.4s ease-out;
   transition: opacity 0.4s ease-out;
+  cursor: pointer;
 }
 
 .menu-content-title div:hover > .fas {

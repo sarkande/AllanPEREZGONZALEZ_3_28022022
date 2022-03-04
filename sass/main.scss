@@ -26,6 +26,12 @@ $color-background-restaurants--title: #fff;
 $color-background-footer: #353535;
 $color-footer: #fff;
 
+@mixin computer {
+	@media (min-width: 1000px) {
+		@content;
+	}
+}
+
 //test
 * {
 	border: 0 none;
@@ -47,6 +53,17 @@ h5 {
 	font-weight: 100 !important;
 }
 
+main {
+	@include computer {
+		display: flex;
+		flex-wrap: wrap;
+	}
+	section {
+		@include computer {
+			flex: 1 1 40%;
+		}
+	}
+}
 header {
 	padding-top: 5px;
 	padding-bottom: 5px;
@@ -108,10 +125,18 @@ header {
 			color: $color-btn;
 			font-weight: bold;
 			box-shadow: 2px 2px 5px lighten($color-shadow, 20%);
+			cursor: pointer;
 			&:hover {
-				background: linear-gradient($color-primary, $color-secondary);
+				background: linear-gradient(
+					lighten($color-secondary, 2%),
+					lighten($color-primary, 2%)
+				);
+				box-shadow: 2px 2px 5px lighten($color-shadow, 0%);
 			}
 		}
+	}
+	@include computer {
+		flex: 0 0 100%;
 	}
 }
 .funct {
@@ -163,6 +188,9 @@ header {
 			}
 		}
 	}
+	@include computer {
+		flex: 0 0 100%;
+	}
 }
 
 .restaurants {
@@ -175,6 +203,10 @@ header {
 		flex: 1 100%;
 		text-decoration: none;
 		color: $color-text;
+
+		@include computer {
+			flex: 1 40%;
+		}
 		&__card {
 			margin: 15px;
 			height: 250px;
@@ -219,11 +251,15 @@ header {
 						-o-text-fill-color: transparent;
 						background-clip: text;
 						-webkit-background-clip: text;
+
+						cursor: pointer;
 					}
 					& > .far {
 						/*heart empty*/
 						opacity: 1;
 						transition: opacity 0.4s ease-out;
+
+						cursor: pointer;
 					}
 					&:hover {
 						& > .fas {
@@ -294,7 +330,11 @@ header {
 			color: $color-btn;
 			cursor: pointer;
 			&:hover {
-				background: linear-gradient($color-primary, $color-secondary);
+				background: linear-gradient(
+					lighten($color-secondary, 2%),
+					lighten($color-primary, 2%)
+				);
+				box-shadow: 2px 2px 5px lighten($color-shadow, 0%);
 			}
 		}
 
@@ -326,11 +366,14 @@ header {
 					-o-text-fill-color: transparent;
 					background-clip: text;
 					-webkit-background-clip: text;
+
+					cursor: pointer;
 				}
 				& > .far {
 					/*heart empty*/
 					opacity: 1;
 					transition: opacity 0.4s ease-out;
+					cursor: pointer;
 				}
 				&:hover {
 					& > .fas {
