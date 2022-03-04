@@ -27,7 +27,13 @@ $color-background-footer: #353535;
 $color-footer: #fff;
 
 @mixin computer {
-	@media (min-width: 1000px) {
+	@media (min-width: 1200px) {
+		@content;
+	}
+}
+
+@mixin tablet {
+	@media (min-width: 768px) {
 		@content;
 	}
 }
@@ -101,6 +107,7 @@ header {
 			padding: 10px;
 			font-weight: bold;
 			background-color: $color-background-search;
+			font-size: initial;
 		}
 	}
 	&__content {
@@ -142,6 +149,7 @@ header {
 .funct {
 	background-color: $color-background-funct;
 	padding-bottom: 30px;
+
 	h2 {
 		margin-top: 40px;
 		margin-left: 15px;
@@ -155,7 +163,10 @@ header {
 		box-shadow: 2px 2px 5px lighten($color-shadow, 40%);
 		padding-top: 10px;
 		padding-bottom: 10px;
-
+		&:hover {
+			background-color: lighten($color-background-funct-btn, 2%);
+			box-shadow: 2px 2px 5px lighten($color-shadow, 20%);
+		}
 		a,
 		a:visited {
 			text-decoration: none;
@@ -204,8 +215,11 @@ header {
 		text-decoration: none;
 		color: $color-text;
 
-		@include computer {
+		@include tablet {
 			flex: 1 40%;
+		}
+		@include computer {
+			flex: 1 0%;
 		}
 		&__card {
 			margin: 15px;
@@ -426,6 +440,14 @@ header {
 		height: 70px;
 		list-style-type: none;
 		padding: 5px;
+
+		@for $i from 1 through 3 {
+			&.card_anim-#{$i} {
+				transform-origin: bottom;
+				animation: (0.4 * $i + 1s) anim_slideup;
+			}
+		}
+
 		h3 {
 			margin-left: 10px;
 			margin-right: 10px;
@@ -484,5 +506,16 @@ footer {
 	a {
 		text-decoration: none;
 		color: $color-btn;
+	}
+}
+
+@keyframes anim_slideup {
+	from {
+		opacity: 0;
+		transform: translateY(25px);
+	}
+	to {
+		opacity: 1;
+		transform: translateY(0px);
 	}
 }

@@ -22,7 +22,7 @@ h5 {
   font-weight: 100 !important;
 }
 
-@media (min-width: 1000px) {
+@media (min-width: 1200px) {
   main {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -32,7 +32,7 @@ h5 {
   }
 }
 
-@media (min-width: 1000px) {
+@media (min-width: 1200px) {
   main section {
     -webkit-box-flex: 1;
         -ms-flex: 1 1 40%;
@@ -82,6 +82,7 @@ header div h1 {
   padding: 10px;
   font-weight: bold;
   background-color: #eaeaea;
+  font-size: initial;
 }
 
 .search__content {
@@ -122,7 +123,7 @@ header div h1 {
           box-shadow: 2px 2px 5px #6e6e6e;
 }
 
-@media (min-width: 1000px) {
+@media (min-width: 1200px) {
   .search {
     -webkit-box-flex: 0;
         -ms-flex: 0 0 100%;
@@ -150,6 +151,12 @@ header div h1 {
           box-shadow: 2px 2px 5px #d4d4d4;
   padding-top: 10px;
   padding-bottom: 10px;
+}
+
+.funct__card:hover {
+  background-color: #fbfbfb;
+  -webkit-box-shadow: 2px 2px 5px #a1a1a1;
+          box-shadow: 2px 2px 5px #a1a1a1;
 }
 
 .funct__card a,
@@ -186,7 +193,7 @@ header div h1 {
   color: gray;
 }
 
-@media (min-width: 1000px) {
+@media (min-width: 1200px) {
   .funct {
     -webkit-box-flex: 0;
         -ms-flex: 0 0 100%;
@@ -213,11 +220,19 @@ header div h1 {
   color: black;
 }
 
-@media (min-width: 1000px) {
+@media (min-width: 768px) {
   .restaurants-link {
     -webkit-box-flex: 1;
         -ms-flex: 1 40%;
             flex: 1 40%;
+  }
+}
+
+@media (min-width: 1200px) {
+  .restaurants-link {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 0%;
+            flex: 1 0%;
   }
 }
 
@@ -327,7 +342,7 @@ header div h1 {
   position: absolute;
 }
 
-@media (min-width: 1000px) {
+@media (min-width: 1200px) {
   .menu-heading {
     -webkit-box-flex: 0;
         -ms-flex: 0 100%;
@@ -347,7 +362,7 @@ header div h1 {
   margin-bottom: 175px;
 }
 
-@media (min-width: 1000px) {
+@media (min-width: 1200px) {
   .menu-content {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -389,7 +404,7 @@ header div h1 {
   margin-left: 20px;
 }
 
-@media (min-width: 1000px) {
+@media (min-width: 1200px) {
   .menu-content-title {
     -webkit-box-flex: 0;
         -ms-flex: 0 100%;
@@ -448,7 +463,7 @@ header div h1 {
   margin-bottom: 50px;
 }
 
-@media (min-width: 1000px) {
+@media (min-width: 1200px) {
   .menu-content__card {
     -webkit-box-flex: 1;
         -ms-flex: 1 30%;
@@ -479,6 +494,27 @@ header div h1 {
   height: 70px;
   list-style-type: none;
   padding: 5px;
+}
+
+.menu-content__card-list.card_anim-1 {
+  -webkit-transform-origin: bottom;
+          transform-origin: bottom;
+  -webkit-animation: 1.4s anim_slideup;
+          animation: 1.4s anim_slideup;
+}
+
+.menu-content__card-list.card_anim-2 {
+  -webkit-transform-origin: bottom;
+          transform-origin: bottom;
+  -webkit-animation: 1.8s anim_slideup;
+          animation: 1.8s anim_slideup;
+}
+
+.menu-content__card-list.card_anim-3 {
+  -webkit-transform-origin: bottom;
+          transform-origin: bottom;
+  -webkit-animation: 2.2s anim_slideup;
+          animation: 2.2s anim_slideup;
 }
 
 .menu-content__card-list h3 {
@@ -554,5 +590,31 @@ footer li:last-child {
 footer a {
   text-decoration: none;
   color: #fff;
+}
+
+@-webkit-keyframes anim_slideup {
+  from {
+    opacity: 0;
+    -webkit-transform: translateY(25px);
+            transform: translateY(25px);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+}
+
+@keyframes anim_slideup {
+  from {
+    opacity: 0;
+    -webkit-transform: translateY(25px);
+            transform: translateY(25px);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
 }
 /*# sourceMappingURL=main.css.map */
