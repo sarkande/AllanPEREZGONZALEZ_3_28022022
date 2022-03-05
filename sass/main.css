@@ -134,6 +134,7 @@ header div h1 {
 .funct {
   background-color: #fff;
   padding-bottom: 30px;
+  cursor: pointer;
 }
 
 .funct h2 {
@@ -491,7 +492,7 @@ header div h1 {
   margin: 15px;
   position: relative;
   background-color: #fff;
-  height: 70px;
+  height: 80px;
   list-style-type: none;
   padding: 5px;
   overflow: hidden;
@@ -516,6 +517,13 @@ header div h1 {
           transform-origin: bottom;
   -webkit-animation: 2.2s anim_slideup;
           animation: 2.2s anim_slideup;
+}
+
+.menu-content__card-list.card_anim-4 {
+  -webkit-transform-origin: bottom;
+          transform-origin: bottom;
+  -webkit-animation: 2.6s anim_slideup;
+          animation: 2.6s anim_slideup;
 }
 
 .menu-content__card-list h3 {
@@ -545,6 +553,7 @@ header div h1 {
 
 .menu-content__card-list--price {
   font-weight: bold;
+  margin-left: 5px;
 }
 
 .menu-content__card-list:hover .menu-content__card-list--price {
@@ -576,7 +585,7 @@ header div h1 {
   background: #99e2d0;
   border-radius: 0px 15px 15px 0px;
   width: 70px;
-  height: 80px;
+  height: 90px;
   -webkit-transition: -webkit-transform 0.5s;
   transition: -webkit-transform 0.5s;
   transition: transform 0.5s;
@@ -588,7 +597,7 @@ header div h1 {
 }
 
 .menu-content__card-list--check i {
-  line-height: 80px;
+  line-height: 90px;
   color: #fff;
   font-size: 30px;
 }
@@ -618,6 +627,79 @@ footer li:last-child {
 footer a {
   text-decoration: none;
   color: #fff;
+}
+
+.loader {
+  -webkit-animation: anim_hide-loader 3s;
+          animation: anim_hide-loader 3s;
+  opacity: 0;
+  z-index: -10;
+  position: fixed;
+  padding: 0;
+  margin: 0;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.5);
+}
+
+.loader__container {
+  position: fixed;
+  left: calc((50vw - 50%) * -1);
+  top: calc((50vh - 50%) * -1);
+  -webkit-transform: translate(calc(50vw - 50%), calc(50vh - 50%));
+          transform: translate(calc(50vw - 50%), calc(50vh - 50%));
+}
+
+.loader__cont {
+  background: -webkit-gradient(linear, left top, left bottom, from(#9356dc), color-stop(#ff79da), to(#99e2d0));
+  background: linear-gradient(#9356dc, #ff79da, #99e2d0);
+  width: 120px;
+  height: 120px;
+  border-radius: 100%;
+  padding: 10px;
+  -webkit-animation: anim_loader 2s linear infinite;
+          animation: anim_loader 2s linear infinite;
+}
+
+.loader__cont--box {
+  background: #6023a9;
+  color: white;
+  width: 120px;
+  height: 120px;
+  border-radius: 1000px;
+}
+
+.loader__text {
+  position: relative;
+  color: white;
+  z-index: 3;
+  top: 85px;
+  left: 15px;
+  font-family: "Shrikhand", serif;
+}
+
+@-webkit-keyframes anim_loader {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes anim_loader {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
 }
 
 @-webkit-keyframes anim_slideup {
@@ -665,6 +747,32 @@ footer a {
   to {
     -webkit-transform: rotate(360deg);
             transform: rotate(360deg);
+  }
+}
+
+@-webkit-keyframes anim_hide-loader {
+  from {
+    opacity: 0;
+    display: none;
+    z-index: -10;
+  }
+  to {
+    opacity: 1;
+    display: fixed;
+    z-index: 100;
+  }
+}
+
+@keyframes anim_hide-loader {
+  from {
+    opacity: 0;
+    display: none;
+    z-index: -10;
+  }
+  to {
+    opacity: 1;
+    display: fixed;
+    z-index: 100;
   }
 }
 /*# sourceMappingURL=main.css.map */
