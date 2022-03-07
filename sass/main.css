@@ -125,9 +125,8 @@ header div h1 {
 
 @media (min-width: 1200px) {
   .search {
-    -webkit-box-flex: 0;
-        -ms-flex: 0 0 100%;
-            flex: 0 0 100%;
+    border-radius: 25px;
+    margin-top: 5px;
   }
 }
 
@@ -196,9 +195,10 @@ header div h1 {
 
 @media (min-width: 1200px) {
   .funct {
-    -webkit-box-flex: 0;
-        -ms-flex: 0 0 100%;
-            flex: 0 0 100%;
+    border-radius: 25px;
+    background-color: #eaeaea;
+    margin-left: 5px;
+    margin-top: 5px;
   }
 }
 
