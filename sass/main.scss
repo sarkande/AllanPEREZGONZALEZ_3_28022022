@@ -4,6 +4,7 @@
 
 @import "./Utils/variables";
 @import "./Base/base";
+@import "./Base/animations";
 
 @import "./Composants/funct";
 @import "./Composants/loader";
@@ -16,49 +17,4 @@
 @import "./Layout/main";
 @import "./Layout/footer";
 
-/*ICONS*/
-.far.fa-heart.thin {
-	font-weight: 100 !important;
-}
-
-/*Animations*/
-@keyframes anim_loader {
-	from {
-		transform: rotate(0deg);
-	}
-	to {
-		transform: rotate(360deg);
-	}
-}
-
-@keyframes anim_slideup {
-	from {
-		opacity: 0;
-		transform: translateY(25px);
-	}
-	to {
-		opacity: 1;
-		transform: translateY(0px);
-	}
-}
-
-@keyframes anim_turn-check {
-	from {
-		transform: rotate(0deg);
-	}
-	to {
-		transform: rotate(360deg);
-	}
-}
-
-@keyframes anim_hide-loader {
-	from {
-		opacity: 0;
-		display: none;
-		z-index: -10;
-	}
-	to {
-		opacity: 1;
-		z-index: 100;
-	}
-}
+@import "./Vendors/fa-modif";
