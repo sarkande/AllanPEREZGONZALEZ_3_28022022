@@ -1,0 +1,62 @@
+/*Funct content*/
+.funct {
+	background-color: $color-background-funct;
+	padding-bottom: 30px;
+	cursor: pointer;
+
+	h2 {
+		margin-top: 40px;
+		margin-left: 15px;
+	}
+	&__card {
+		border-radius: 10px;
+		min-height: 50px;
+		margin: 20px;
+		background-color: $color-background-funct-btn;
+		line-height: 50px;
+		box-shadow: 2px 2px 5px lighten($color-shadow, 40%);
+		padding-top: 10px;
+		padding-bottom: 10px;
+		&:hover {
+			background-color: lighten($color-background-funct-btn, 2%);
+			box-shadow: 2px 2px 5px lighten($color-shadow, 20%);
+		}
+		a,
+		a:visited {
+			text-decoration: none;
+			color: $color-text;
+		}
+
+		&--id {
+			border-radius: 100%;
+			width: 20px;
+			height: 20px;
+			line-height: 20px;
+			right: 10px;
+			position: relative;
+			display: inline-block;
+			text-align: center;
+			background-color: $color-primary;
+			color: $color-btn;
+			font-size: small;
+		}
+		p {
+			position: relative;
+			display: inline-block;
+			left: 40px;
+			font-weight: 500;
+			margin-right: 50px;
+			i {
+				position: relative;
+				right: 30px;
+				color: lighten($color-text, 50%);
+			}
+		}
+	}
+	@include computer {
+		border-radius: 25px;
+		background-color: $color-background-search;
+		margin-left: 5px;
+		margin-top: 5px;
+	}
+}

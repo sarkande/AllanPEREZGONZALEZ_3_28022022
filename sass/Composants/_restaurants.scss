@@ -1,0 +1,107 @@
+/*Restaurant content*/
+.restaurants {
+	background-color: $color-background-restaurants;
+	padding-top: 30px;
+	padding-bottom: 50px;
+	display: flex;
+	flex-wrap: wrap;
+	&-link {
+		flex: 1 100%;
+		text-decoration: none;
+		color: $color-text;
+
+		@include tablet {
+			flex: 1 40%;
+		}
+		@include computer {
+			flex: 1 0%;
+		}
+		&__card {
+			margin: 15px;
+			height: 250px;
+			border-radius: 20px;
+			background-color: $color-background-restaurants--title;
+			box-shadow: 2px 2px 5px lighten($color-shadow, 20%);
+			&--img {
+				width: 100%;
+				height: 175px;
+				object-fit: cover;
+				border-radius: 20px 20px 0px 0px;
+			}
+			&--descr {
+				h3 {
+					margin-top: 10px;
+					margin-left: 10px;
+				}
+				p {
+					margin-left: 10px;
+				}
+
+				div {
+					i {
+						position: relative;
+						right: 35px;
+						float: right;
+						bottom: 40px;
+						font-size: 30px;
+					}
+
+					& > .fas {
+						/*heart full*/
+						transform: scale(0);
+						position: relative;
+						right: 5px;
+						transition: transform 0.3s ease-out;
+
+						background: linear-gradient($color-primary, $color-secondary);
+						-webkit-text-fill-color: transparent;
+						-moz-text-fill-color: transparent;
+						-ms-text-fill-color: transparent;
+						-o-text-fill-color: transparent;
+						background-clip: text;
+						-webkit-background-clip: text;
+
+						cursor: pointer;
+					}
+					& > .far {
+						/*heart empty*/
+						opacity: 1;
+						transition: opacity 0.4s ease-out;
+
+						cursor: pointer;
+					}
+					&:hover {
+						& > .fas {
+							transform: scale(1);
+						}
+						& > .far {
+							opacity: 0;
+						}
+					}
+				}
+			}
+		}
+
+		&--new {
+			background-color: $color-tertiary;
+			color: darken($color-tertiary, 40%);
+
+			text-align: center;
+			padding: 5px 10px 5px 10px;
+
+			position: relative;
+			float: right;
+			margin-right: 25px;
+			bottom: 255px;
+			visibility: hidden;
+			&.active {
+				visibility: visible;
+			}
+		}
+	}
+
+	h2 {
+		margin: 15px;
+		width: 100%;
+	}
+}

@@ -1,0 +1,92 @@
+.menu-content__card {
+	margin-bottom: 50px;
+	@include computer {
+		flex: 1 30%;
+	}
+	h2 {
+		text-transform: uppercase;
+		margin-left: 20px;
+		margin-top: 20px;
+		&::after {
+			border-bottom: solid 3px $color-tertiary;
+			content: "";
+			display: block;
+			width: 60px;
+		}
+	}
+	&-list {
+		box-shadow: 2px 2px 5px lighten($color-shadow, 40%);
+		border-radius: 15px;
+		margin: 15px;
+		position: relative;
+		background-color: #fff;
+		height: 80px;
+		list-style-type: none;
+		padding: 5px;
+		overflow: hidden;
+
+		@for $i from 1 through 4 {
+			/*Animation to display elements*/
+			&.card_anim-#{$i} {
+				transform-origin: bottom;
+				animation: (0.4 * $i + 1s) anim_slideup;
+			}
+		}
+
+		h3 {
+			margin-left: 10px;
+			margin-right: 10px;
+			margin-top: 10px;
+		}
+		p {
+			display: flex;
+			justify-content: space-between;
+			margin: 10px;
+		}
+		&--product {
+			overflow: hidden;
+			text-overflow: ellipsis;
+			white-space: nowrap;
+			flex: 1 90%;
+		}
+		&--price {
+			font-weight: bold;
+			margin-left: 5px;
+		}
+		&:hover {
+			.menu-content__card-list--price {
+				flex: 1;
+				margin-right: 70px;
+				transition: margin-right 0.4s;
+			}
+			.menu-content__card-list--check {
+				display: block;
+
+				transform: translateX(-100px);
+				transition: transform 0.3s;
+				i {
+					animation: 0.4s anim_turn-check;
+				}
+			}
+		}
+		&--check {
+			position: absolute;
+			background: #99e2d0;
+			border-radius: 0px 15px 15px 0px;
+			width: 70px;
+			height: 90px;
+			transition: transform 0.5s;
+
+			text-align: center;
+			top: 0;
+			right: -100px;
+			display: block;
+
+			i {
+				line-height: 90px;
+				color: $color-btn;
+				font-size: 30px;
+			}
+		}
+	}
+}

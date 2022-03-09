@@ -1,0 +1,52 @@
+/*Search content*/
+.search {
+	text-align: center;
+	background-color: $color-background-search;
+	z-index: 5;
+	&__location {
+		padding: 5px;
+		margin-left: 35px;
+		input {
+			padding: 10px;
+			font-weight: bold;
+			background-color: $color-background-search;
+			font-size: initial;
+		}
+	}
+	&__content {
+		background-color: $color-background-search-content;
+		padding-top: 30px;
+		h2 {
+			font-weight: bold;
+			margin: 15px 20px 20px 15px;
+		}
+		p {
+			font-weight: 300;
+			margin: 0px 20px 20px 15px;
+		}
+		&--btn {
+			margin: 15px;
+			margin-bottom: 50px;
+			padding: 10px;
+			border-radius: 30px;
+			width: 200px;
+			height: 50px;
+			background: linear-gradient($color-secondary, $color-primary);
+			color: $color-btn;
+			font-weight: bold;
+			box-shadow: 2px 2px 5px lighten($color-shadow, 20%);
+			cursor: pointer;
+			&:hover {
+				background: linear-gradient(
+					lighten($color-secondary, 2%),
+					lighten($color-primary, 2%)
+				);
+				box-shadow: 2px 2px 5px lighten($color-shadow, 0%);
+			}
+		}
+	}
+	@include computer {
+		border-radius: 25px;
+		margin-top: 5px;
+	}
+}

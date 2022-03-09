@@ -1,0 +1,22 @@
+footer {
+	background-color: $color-background-footer;
+	color: $color-footer;
+	padding-left: 10px;
+	h5 {
+		padding-top: 20px;
+		padding-bottom: 15px;
+		font-size: 20px;
+		font-weight: normal;
+	}
+	li {
+		margin-top: 10px;
+		list-style-type: none;
+		&:last-child {
+			padding-bottom: 50px;
+		}
+	}
+	a {
+		text-decoration: none;
+		color: $color-btn;
+	}
+}

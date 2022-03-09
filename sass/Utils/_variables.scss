@@ -1,0 +1,36 @@
+// Font Variables
+$shrikhand: "Shrikhand", serif;
+$roboto: "Roboto", serif;
+
+//Colors
+$color-primary: #9356dc;
+$color-secondary: #ff79da;
+$color-tertiary: #99e2d0;
+
+$color-text: black;
+
+$color-shadow: rgb(110, 110, 110);
+$color-background-search: #eaeaea;
+$color-background-search-content: #f6f6f6;
+$color-background-funct: #fff;
+
+$color-btn: #fff;
+$color-background-funct-btn: #f6f6f6;
+
+$color-background-restaurants: #f6f6f6;
+$color-background-restaurants--title: #fff;
+
+$color-background-footer: #353535;
+$color-footer: #fff;
+
+@mixin computer {
+	@media (min-width: 1200px) {
+		@content;
+	}
+}
+
+@mixin tablet {
+	@media (min-width: 768px) {
+		@content;
+	}
+}
