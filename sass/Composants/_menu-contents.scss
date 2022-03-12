@@ -54,6 +54,7 @@
 			margin-left: 5px;
 		}
 		&:hover {
+			cursor: pointer;
 			.menu-content__card-list--price {
 				flex: 1;
 				margin-right: 70px;
